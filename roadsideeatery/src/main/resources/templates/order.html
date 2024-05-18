@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order - Roadside Eatery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark text-white">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Roadside Eatery</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="order.html">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 class="text-center mb-4">Place Your Order</h2>
+        
+            <form th:action="{/OrderController}" th:object="${OrderController}" method="POST">
+                <div class="form-group">
+                    <label for="items">Select Items:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Chicken Liver's" id="item1">
+                        <label class="form-check-label" for="item1">Chicken Liver's</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Chicken Gizzards" id="item2">
+                        <label class="form-check-label" for="item2">Chicken Gizzards</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Chicken Feet & Mala" id="item3">
+                        <label class="form-check-label" for="item3">Chicken Feet & Mala</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Wors Stew" id="item4">
+                        <label class="form-check-label" for="item4">Wors Stew</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Grilled Chicken" id="item5">
+                        <label class="form-check-label" for="item5">Grilled Chicken</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Braai Wors" id="item6">
+                        <label class="form-check-label" for="item6">Braai Wors</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Pork" id="item7">
+                        <label class="form-check-label" for="item7">Pork</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Braai Meat" id="item8">
+                        <label class="form-check-label" for="item8">Braai Meat</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Leg Quarter" id="item9">
+                        <label class="form-check-label" for="item9">Leg Quarter</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Fish & Chips" id="item10">
+                        <label class="form-check-label" for="item10">Fish & Chips</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Pork & Chips + Quarter" id="item11">
+                        <label class="form-check-label" for="item11">Pork & Chips + Quarter</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Burger's + Chips" id="item12">
+                        <label class="form-check-label" for="item12">Burger's + Chips</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Pap" id="item13">
+                        <label class="form-check-label" for="item13">Pap</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Chakalaka" id="item14">
+                        <label class="form-check-label" for="item14">Chakalaka</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Vegetable Salad" id="item15">
+                        <label class="form-check-label" for="item15">Vegetable Salad</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Coke 440ml" id="item16">
+                        <label class="form-check-label" for="item16">Coke 440ml</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Juice Cappy Tropical" id="item17">
+                        <label class="form-check-label" for="item17">Juice Cappy Tropical</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Dragon" id="item18">
+                        <label class="form-check-label" for="item18">Dragon</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="2 Ltr Returnable without dep" id="item19">
+                        <label class="form-check-label" for="item19">2 Ltr Returnable without dep</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Coke 1.25 Ltr" id="item20">
+                        <label class="form-check-label" for="item20">Coke 1.25 Ltr</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="items[]" value="Juice Flavour 1Ltr" id="item21">
+                        <label class="form-check-label" for="item21">Juice Flavour 1Ltr</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="form-control" name="quantity" id="quantity" min="1" value="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" class="form-control" name="name" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address:</label>
+                    <input type="text" class="form-control" name="address" id="address" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </form>
+            
+      
+    </div>
+</body>
+</html>

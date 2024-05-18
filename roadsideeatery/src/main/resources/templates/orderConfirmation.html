@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Roadside Eatery</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="order.html">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<section id="order" class="order-section">
+    <div class="container">
+        <h2 class="text-center mb-4">Order Confirmation</h2>
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Thank you for your order, <span th:text="${order.name}">Customer</span>!</h4>
+            <p>Your order has been placed successfully. Here are the details:</p>
+            <hr>
+            <p class="mb-0"><strong>Items:</strong> <span th:text="${order.items}"></span></p>
+            <p class="mb-0"><strong>Quantity:</strong> <span th:text="${order.quantity}"></span></p>
+            <p class="mb-0"><strong>Email:</strong> <span th:text="${order.email}"></span></p>
+            <p class="mb-0"><strong>Address:</strong> <span th:text="${order.address}"></span></p>
+        </div>
+    </div>
+</section>
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Roadside Eatery. All rights reserved.</p>
+</footer>
+</body>
+</html>
